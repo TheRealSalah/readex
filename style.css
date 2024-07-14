@@ -199,7 +199,7 @@ hr{
 @media (max-width: 768px){
     .home{
     margin-top: 50px;
-    height: 100vh;
+    height: 100%;
     padding: 30px 30px;
 }
 .home .frame{
