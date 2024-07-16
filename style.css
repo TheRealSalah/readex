@@ -273,6 +273,7 @@ hr{
 .row h2{
     font-weight: 600;
 }
+
 .row .col{
     width: 50%;
     height: 100%;
@@ -288,6 +289,12 @@ hr{
     background-color: #F4F4F4;
     border-radius: 25px;
     margin-top: 15px;
+}
+.f-item .fetureh2{
+    margin-bottom: 15px;
+}
+.f-item .fetureh22{
+    margin-bottom: 12px;
 }
 .col21{
     padding: 28px 60px;
@@ -347,6 +354,12 @@ hr{
     background-color: #F4F4F4;
     border-radius: 25px;
     margin-top: 15px;
+}
+.f-item .fetureh2{
+    margin-bottom: 15px;
+}
+.f-item .fetureh22{
+    margin-bottom: 15px;
 }
 }
 
