@@ -4,3 +4,8 @@ const navbarLinks = document.querySelector('.navbar-links');
 toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active');
 });
+
+
+document.getElementById('buynow').addEventListener('click', function() {
+    window.open('/checkout.html')
+});
