@@ -33,7 +33,7 @@
         <div class="imgframe">
             <div class="slideshow-container">
                 <div class="mySlides">
-                    <img src="img/product-1.png" onclick="openModal('img/product-1.png')" alt="">
+                    <img src="img/product-1.jpg" onclick="openModal('img/product-1.jpg')" alt="">
                 </div>
                 <div class="mySlides">
                     <img src="img/product-2.jpg" onclick="openModal('img/product-2.jpg')" alt="">
@@ -41,11 +41,15 @@
                 <div class="mySlides">
                     <img src="img/product-3.jpg" onclick="openModal('img/product-3.jpg')" alt="">
                 </div>
+                <div class="mySlides">
+                    <img src="img/product-4.jpg" onclick="openModal('img/product-4.jpg')" alt="">
+                </div>
             </div>
             <div class="dot-container">
                 <span class="dot" onclick="currentSlide(1)"></span> 
                 <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span> 
             </div>
         </div>
         <div class="buynowbtn" id="buynow">
@@ -99,6 +103,19 @@
             </div>
         </div>
     </div>
+
+<div class="type">
+    <div class="section">
+        <h1>A Gift of</h1>
+        <div class="typeeff">
+            <h1 class="maintitle" id="typing"> </h1>
+        </div>
+        
+        <p>Readex-Adjustable Quran Stand is more than just a useful daily tool, It's a sign of your loved one's spiritual connection. This special gift will be cherished for years, reminding them of your love and care each time they use it.</p>
+    </div>
+</div>
+
+
 
 <div class="about" id="about">
     <div class="frame">
@@ -217,6 +234,36 @@ function closeModal() {
 }
 
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const texts = ["Love", "Kindness", "Friendship", "Gratitude", "Kindness", "Meaning", "Happiness", "Appreciation"];
+      let textIndex = 0;
+      let charIndex = 0;
+      const typingElement = document.getElementById("typing");
 
+      function type() {
+        if (charIndex < texts[textIndex].length) {
+          typingElement.textContent += texts[textIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, 100); // Adjust the delay as needed
+        } else {
+          setTimeout(erase, 2000); // Pause before erasing
+        }
+      }
+
+      function erase() {
+        if (charIndex > 0) {
+          typingElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(erase, 50); // Adjust the delay as needed
+        } else {
+          textIndex = (textIndex + 1) % texts.length;
+          setTimeout(type, 500); // Pause before typing next word
+        }
+      }
+
+      type();
+    });
+  </script>
     
 </html>
